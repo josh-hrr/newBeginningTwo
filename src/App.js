@@ -3,6 +3,8 @@ import './App.css';
 import {Form, Badge, Button} from 'react-bootstrap';
 import axios from 'axios';
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const postData = async (url, data) => {
   try {
     const response = await axios.post(url, data);
@@ -18,7 +20,7 @@ const handleSubmit = async (event) => {
   const email = event.target.elements.email.value;
   const message = event.target.elements.message.value;
   const data = { name, email, message };
-  const response = await postData('https://fm56pa3fp6.execute-api.us-east-1.amazonaws.com/add-contact', data);
+  const response = await postData(`${apiUrl}/add-contact`, data);
   console.log(response);
 };
 

@@ -1,53 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import {Form, Badge, Button} from 'react-bootstrap';
-import axios from 'axios';
-
-const apiUrl = process.env.REACT_APP_API_URL;
-
-const postData = async (url, data) => {
-  try {
-    const response = await axios.post(url, data);
-    return response.data;
-  } catch (error) {
-    console.error(`Error in postData: ${error}`);
-  }
-};
-
-const handleSubmit = async (event) => {
-  event.preventDefault();
-  const name = event.target.elements.name.value;
-  const email = event.target.elements.email.value;
-  const message = event.target.elements.message.value;
-  const data = { name, email, message };
-  const response = await postData(`${apiUrl}/add-contact`, data);
-  console.log(response);
-};
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import DataPage from './components/DataPage';
+import ContactForm from './components/ContactForm';
+import './App.css';  
 
 function App() {
-  return (
+  return ( 
     <div className="App"> 
-      <h1>
-        Contact Form
-      </h1>
-      <br>
-      </br>
-      <Form onSubmit={handleSubmit}>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label>Enter your name</Form.Label>
-          <Form.Control name="name" type="name" placeholder="Enter your name" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control name="email" type="email" placeholder="name@example.com" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Message</Form.Label>
-          <Form.Control name="message" type="message" as="textarea" rows={3} placeholder="Your message"/>
-        </Form.Group>
-        <Button type="submit" variant="primary">Submit</Button>
-      </Form>
+      <Router>
+        <Routes>  
+          <Route path="/contactForm" element={<ContactForm />}>  
+          </Route>
+          <Route path="/contactFormData" element={<DataPage />}>
+          </Route> 
+        </Routes>
+      </Router> 
     </div>
   );
 }

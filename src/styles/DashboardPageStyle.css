@@ -1,0 +1,6 @@
+@media (min-width: 601px) {
+    .left {
+        width: 15%;
+        border: 1px solid olivedrab;
+    }
+}

@@ -1,0 +1,22 @@
+ 
+.home {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.home h1, .home h2 {
+    color: #333;
+}
+
+.home .color-blue {
+    color: blue;
+}
+
+.home .color-orange {
+    color: orange;
+}
+
+.home a {
+    color: #007BFF;
+    text-decoration: none;
+}

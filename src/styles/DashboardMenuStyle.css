@@ -1,0 +1,86 @@
+ 
+/* Styles for screens larger than 601px */
+@media (min-width: 601px) {
+
+    .sideBarMenuList {
+        margin: 0;
+        padding: 0;
+    } 
+ 
+    .sideBarMenuList li  {   
+        font-weight: 400;
+        margin: 5px;
+        border-radius: 0.25rem/* 4px */;
+    }
+
+    .sideBarMenuList li:hover  {  
+        cursor: pointer; 
+        background-color: rgba(243, 244, 246, 1);
+        border-color:rgba(59, 130, 246, 1);
+    } 
+
+    .sideBarMenuList li.active {  
+        cursor: pointer; 
+        background-color: rgba(243, 244, 246, 1); 
+    }
+
+
+    
+
+    .dashboard-menu {    
+        position: fixed;
+        left: 0;
+        width: 225px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; 
+        background-color: white;
+        z-index: 1; 
+    }
+
+    .dashboard-menu__item { 
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin: 10px 15px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer; 
+        border: 2px solid white;
+        border-radius: 50%; 
+        background-color: white;  
+    }
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+
+    .sideBarMenuList {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .dashboard-menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+     }
+
+     .dashboard-menu__item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease; 
+        border: 2px solid white;
+        border-radius: 50%;  
+        background-color: white;
+    }
+}

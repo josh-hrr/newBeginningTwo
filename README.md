@@ -11,6 +11,12 @@
 - Go back to your github repository 
 - Create a pull request to merge your changes with master branch
 
+
+# Dependencies you will need to install
+
+- npm install
+- npm install react
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

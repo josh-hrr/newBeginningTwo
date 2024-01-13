@@ -1,3 +1,16 @@
+# Steps to contribute to this project
+
+- Fork this repository
+- Clone the forked repo from your repository
+- Create a new feature branch
+- Checkout to the new feature branch
+- Make your changes
+- Execute the git add command
+- Execute the git commmit command
+- Execute the git push origin "feature branch name"
+- Go back to your github repository 
+- Create a pull request to merge your changes with master branch
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
